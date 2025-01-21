@@ -1,1 +1,3 @@
 rootProject.name = 'java-bootcamp'
+include 'kodilla-testing'
+
