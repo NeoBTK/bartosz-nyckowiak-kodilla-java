@@ -3,11 +3,9 @@ package com.kodilla.testing.shape;
 public class Square implements Shape {
 
     private double sideA;
-    private double sideB;
 
-    public Square(double sideA, double sideB) {
+    public Square(double sideA) {
         this.sideA = sideA;
-        this.sideB = sideB;
     }
 
     @Override
@@ -17,7 +15,18 @@ public class Square implements Shape {
 
     @Override
     public double getField() {
-        return this.sideA * this.sideB;
+        return this.sideA * this.sideA;
     }
 
+    @Override
+    public final boolean equals(Object o) {
+        if (!(o instanceof Square square)) return false;
+
+        return Double.compare(sideA, square.sideA) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Double.hashCode(sideA);
+    }
 }

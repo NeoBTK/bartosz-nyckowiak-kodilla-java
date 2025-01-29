@@ -18,4 +18,18 @@ public class Circle implements Shape {
     public double getField() {
         return PI * (this.radius * this.radius);
     }
+
+    @Override
+    public final boolean equals(Object o) {
+        if (!(o instanceof Circle circle)) return false;
+
+        return Double.compare(radius, circle.radius) == 0 && Double.compare(PI, circle.PI) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Double.hashCode(radius);
+        result = 31 * result + Double.hashCode(PI);
+        return result;
+    }
 }
