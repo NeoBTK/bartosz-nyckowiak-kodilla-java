@@ -2,14 +2,14 @@ package com.kodilla.testing.forum.statistics;
 
 public class ForumStatistics {
 
-    private int userCount;
-    private int postCount;
-    private int commentCount;
-    private double avgPostsPerUser;
-    private double avgCommentsPerUser;
-    private double avgCommentsPerPost;
+    private static int userCount;
+    private static int postCount;
+    private static int commentCount;
+    private static double avgPostsPerUser;
+    private static double avgCommentsPerUser;
+    private static double avgCommentsPerPost;
 
-    public void calculateAdvStatistics(Statistics statistics) {
+    public static void calculateAdvStatistics(Statistics statistics) {
         userCount = statistics.usersNames().size();
         postCount = statistics.postsCount();
         commentCount = statistics.commentsCount();
@@ -42,26 +42,26 @@ public class ForumStatistics {
         System.out.println("Avg comments per post: " + avgCommentsPerPost);
     }
 
-    public int getUserCount() {
+    public static int getUserCount() {
         return userCount;
     }
 
-    public int getPostCount() {
+    public static int getPostCount() {
         return postCount;
     }
-    public int getCommentCount() {
+    public static int getCommentCount() {
         return commentCount;
     }
 
-    public double getAvgPostsPerUser() {
+    public static double getAvgPostsPerUser() {
         return avgPostsPerUser;
     }
 
-    public double getAvgCommentsPerUser() {
+    public static double getAvgCommentsPerUser() {
         return avgCommentsPerUser;
     }
 
-    public double getAvgCommentsPerPost() {
+    public static double getAvgCommentsPerPost() {
         return avgCommentsPerPost;
     }
 }
