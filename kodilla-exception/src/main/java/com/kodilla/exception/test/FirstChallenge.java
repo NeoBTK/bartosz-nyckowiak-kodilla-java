@@ -3,8 +3,9 @@ package com.kodilla.exception.test;
 public class FirstChallenge {
 
     public static void main(String[] args) {
+        FirstChallenge firstChallenge = new FirstChallenge();
+
         try {
-            FirstChallenge firstChallenge = new FirstChallenge();
             double result = firstChallenge.divide(3, 1);
             System.out.println("Wynik: " + result);
         } catch (ArithmeticException e) {
