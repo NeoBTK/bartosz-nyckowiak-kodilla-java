@@ -16,11 +16,11 @@ public class UserTestSuite {
 
         //When
         String johnSharesOn = john.sharePost();
-        System.out.println("John shares post on" + johnSharesOn);
+        System.out.println("John shares post on " + johnSharesOn);
         String melonSharesOn = melon.sharePost();
-        System.out.println("Melon shares post on" + melonSharesOn);
+        System.out.println("Melon shares post on " + melonSharesOn);
         String justinSharesOn = justin.sharePost();
-        System.out.println("Justin shares post on" + justinSharesOn);
+        System.out.println("Justin shares post on " + justinSharesOn);
 
         //Then
         assertEquals("Facebook", johnSharesOn);
@@ -35,10 +35,10 @@ public class UserTestSuite {
 
         //When
         String johnSharesOn = john.sharePost();
-        System.out.println("John shares post on" + johnSharesOn);
+        System.out.println("John shares post on " + johnSharesOn);
         john.setSocialPublisher(new TwitterPublisher());
         johnSharesOn = john.sharePost();
-        System.out.println("John shares post on" + johnSharesOn);
+        System.out.println("John shares post on " + johnSharesOn);
 
         //Then
         assertEquals("Twitter", johnSharesOn);
