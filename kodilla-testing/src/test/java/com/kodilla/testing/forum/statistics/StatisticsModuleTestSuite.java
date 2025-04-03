@@ -12,10 +12,10 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-@ExtendWith(MockitoExtension.class)
+//@ExtendWith(MockitoExtension.class)
 public class StatisticsModuleTestSuite {
 
-    @Mock
+    //@Mock
     private Statistics statisticsMock;
 
     private ForumStatistics forumStatistics;

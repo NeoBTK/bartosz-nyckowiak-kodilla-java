@@ -10,9 +10,10 @@ repositories {
 }
 
 dependencies {
+    implementation 'com.mysql:mysql-connector-j:9.2.0'
     testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.mockito:mockito-junit-jupiter:5.15.2'
     testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'org.mockito:mockito-junit-jupiter:5.16.1'
 }
 
 test {
