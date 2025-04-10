@@ -6,6 +6,12 @@ import jakarta.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+@NamedNativeQuery(
+        name = "Company.retrieveCompaniesWithFirstThreeLettersInName",
+        query = "SELECT * FROM companies " +
+                "WHERE SUBSTRING(company_name, 1, 3) = :COMPANY_NAME",
+        resultClass = Company.class
+)
 @Entity
 @Table(name ="COMPANIES")
 public class Company {
